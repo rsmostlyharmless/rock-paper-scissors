@@ -1,0 +1,52 @@
+body {
+    background-image: url(../rock-paper-scissors/img/me\ copy.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 100px;
+}
+
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 7em;
+    text-align: center;
+    color: rgba(33, 129, 33, 0.6);
+    margin: 50px;
+    padding: 70px;
+}
+
+#buttons {
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+button {
+    height: 200px;
+    width: 200px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.rock {
+    background-image: url(../rock-paper-scissors/img/rock.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.paper {
+    background-image: url(../rock-paper-scissors/img/paper.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.scissors {
+    background-image: url(../rock-paper-scissors/img/scissors.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
