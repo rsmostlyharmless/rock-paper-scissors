@@ -2,16 +2,42 @@ body {
     background-image: url(../rock-paper-scissors/img/me\ copy.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 100px;
 }
 
 h1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 7em;
     text-align: center;
-    color: rgba(33, 129, 33, 0.6);
-    margin: 50px;
-    padding: 70px;
+    color: rgba(13, 73, 13, 0.6);
+}
+
+#score-board {
+    margin: 20px auto;
+    /*border: 3px solid black; Helped to align players and scores*/ 
+    border-radius: 4px;
+    text-align: center;
+    width: 200px;
+    color: black;
+    padding: 15px 20px;
+    font-size: 40px;
+    position: relative;
+}
+
+.badges {
+    font-size: 14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#user-label {
+    position: absolute;
+    top: 12px;
+    left: -35px;
+}
+
+#computer-label {
+    position: absolute;
+    top: 12px;
+    right: -50px;
 }
 
 #buttons {
@@ -22,9 +48,10 @@ h1 {
 }
 
 button {
+    margin: 50px;
     height: 200px;
     width: 200px;
-    border-radius: 40px;
+    border-radius: 20%;
     cursor: pointer;
 }
 
@@ -50,3 +77,10 @@ button {
     background-position: center;
 }
 
+.action-message {
+    text-align: center;
+    color: rgba(13, 73, 13, 0.6);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 80px;
+    margin: 0px;
+}

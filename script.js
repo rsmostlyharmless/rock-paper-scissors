@@ -1,3 +1,7 @@
+
+
+
+/* Original script. A mix of my code and help from google. 
 function computerPlay() {
     let random = Math.floor(Math.random() * 3);
     switch(random) {
@@ -73,6 +77,7 @@ const play = () => {
 
 
 
-//play();
+play();
+*/
 
 
