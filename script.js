@@ -22,12 +22,16 @@ function selection(words) {
 }
 
 function win(userChoice, computerChoice) {
+    const userChoice_div = document.getElementById(userChoice);
     userScore++;
     userScore_span.innerHTML = userScore;
+    userChoice_div.classList.add("green-glow");
+    setTimeout( () => userChoice_div.classList.remove ("green-glow"), 300);
+
     if (userScore < 5){result_div.innerHTML = `${selection(userChoice)} beats ${selection(computerChoice)}. Player Wins!`;
     } else if(userScore === 5){
     result_div.innerHTML = "Game over, you win!"
-    restart_div.innerHTML = "\nRefresh page fo play a new game.";
+    restart_div.innerHTML = "Refresh page fo play a new game.";
 
     rock_button.setAttribute("disabled", 1);
     paper_button.setAttribute("disabled", 1);
@@ -36,12 +40,16 @@ function win(userChoice, computerChoice) {
 }
 
 function lose(userChoice, computerChoice) {
+    const userChoice_div = document.getElementById(userChoice);
     computerScore++;
     computerScore_span.innerHTML = computerScore;
+    userChoice_div.classList.add("red-glow");
+    setTimeout( () => userChoice_div.classList.remove ("red-glow"), 300);
+
     if (computerScore < 5){result_div.innerHTML = `${selection(userChoice)} does not beat ${selection(computerChoice)}. Computer Wins!`;
     } else if(computerScore === 5){
     result_div.innerHTML = "Game over, Computer wins!"
-    restart_div.innerHTML = "\nRefresh page fo play a new game.";
+    restart_div.innerHTML = "Refresh page fo play a new game.";
 
     rock_button.setAttribute("disabled", 1);
     paper_button.setAttribute("disabled", 1);
@@ -50,7 +58,10 @@ function lose(userChoice, computerChoice) {
 }
 
 function draw(userChoice, computerChoice) {
+    const userChoice_div = document.getElementById(userChoice);
     result_div.innerHTML = `${selection(userChoice)} equals ${selection(computerChoice)}. It's a Draw!`;
+    userChoice_div.classList.add("purple-glow");
+    setTimeout( () => userChoice_div.classList.remove ("purple-glow"), 300);
 }
 
 function game(userChoice) {
@@ -76,17 +87,11 @@ function game(userChoice) {
 }
 
 function main() {
-    rock_button.addEventListener('click', function() {
-        game("rock");
-    })
+    rock_button.addEventListener('click', () => game("rock"));
 
-    paper_button.addEventListener('click', function() {
-        game("paper");
-    })
+    paper_button.addEventListener('click', () => game("paper"));
 
-    scissors_button.addEventListener('click', function() {
-        game("scissors");
-    })
+    scissors_button.addEventListener('click', () => game("scissors"));
 }
 
 main();
